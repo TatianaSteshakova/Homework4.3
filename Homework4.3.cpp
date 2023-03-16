@@ -6,9 +6,19 @@ int main()
 {
     setlocale(0, "Rus");
 
-    int n = 100;
+    int n;
+    int* mas;
 
-    int* mas = new int[n];
+    cout << "Введите количество элементов в массиве: " << endl;
+    cin >> n;
+    if (n <= 100)
+        mas = new int[n];
+    else
+    {
+        cout << "Количество элементов в массиве больше 100, 100 - максимальное значение. Объявляю массив на 100 элементов." << endl;
+        mas = new int[100];
+    }
+
 
     for (int i = 0; i < n; i++)
     {
